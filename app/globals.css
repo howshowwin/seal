@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-nunito), "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
+}
+
+html,
+body {
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: #dff4fc;
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 天空:3D 畫布是透明的,後面透出這個漸層 */
+.sky {
+  background: linear-gradient(#8fd6f7 0%, #c4ebfb 45%, #dff4fc 62%);
+}
+
+.card {
+  border-radius: 1.75rem;
+  background: rgb(255 255 255 / 0.78);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 10px 30px rgb(60 130 170 / 0.18),
+    inset 0 0 0 2px rgb(255 255 255 / 0.8);
+}
+
+button {
+  cursor: pointer;
+}
